@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The HTML Box Model</title>
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            margin: 0;
+        }
+        .container {
+            
+        }
+        .container.big {
+            background-color: red;
+            padding: 16px;
+        }
+        .box-1 {
+            padding: 16px;
+            background-color: #ffaaff
+        }
+
+        .box-2 {
+            padding: 16px;
+            background-color: #ffffaa
+        }
+
+        #container-2 {
+            padding: 16px;
+            background-color: burlywood;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="assignement-01.html">Assignment-01</a>
+    <div id="container-1" class="container big first">
+        <div class="box-1">
+            <p>Hi - I'm box 1 (and I'm in your Viewport) <a href="#">This is a link</a></p>
+        </div>
+        <div class="box-2">
+            <p>Hi - I'm box 2</p>
+        </div>
+    </div>
+    <div id="container-2" class="container normal second">
+        <div class="box-1">
+            <p>Hi - I'm box 1 (and I'm in your Viewport) <a href="#">This is a link</a></p>
+        </div>
+        <div class="box-2">
+            <p>Hi - I'm box 2</p>
+        </div>
+    </div>
+</body>
+
+</html>
