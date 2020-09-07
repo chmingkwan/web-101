@@ -1,0 +1,35 @@
+
+#site-header {
+    margin: 0;
+    padding: 16px;
+    height: 32px;
+    background-color: lightpink;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+}
+
+.hero {
+    padding: 2px;
+    height: 380px;
+    background-color: lightslategray;
+}
+
+#layout-container {
+    display: flex;
+}
+
+.content.main {
+    height: 650px;
+    background-color: rosybrown;
+    flex: 0 0 70%;
+}
+
+.content.site-bar {
+    height: 650px;
+    background-color: silver;
+    flex: 0 0 30%;
+}
+
