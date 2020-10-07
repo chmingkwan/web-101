@@ -1,7 +1,8 @@
 
 html {
     font-size: 18px;
-    font-family: 'freight-big-pro',serif;
+    font-family: halyard-micro, sans-serif;
+    font-weight: 500;
     font-style: normal;
     background-color: #f7f5f3;
 }
@@ -12,8 +13,68 @@ html {
     }
 }
 
-.container {
+#layout-container {
     max-width: 1024px;
     margin: 0 auto;
+    /* height: fit-content; */
+    
+}
+
+#flexbox1 {
+    display: flex;
+    flex-direction: row;
+    /* outline: solid 1px red; */
+}
+
+#flexbox2 {
+    padding: 60px 45px;
+    background-color: lightblue;
+    text-align: center;
+    justify-content: space-around;
+}
+
+#flexbox3 {
+    padding: 60px 0px;
+    display: grid;
+    grid-template-columns: repeat(3,328px);
+    grid-gap: 90px 20px;
+    justify-content: center;
+}
+
+.text {
+    margin: 50px 40px 20px auto;
+    max-width: 450px;
+}
+
+.picture {
+    margin: 30px auto;
+}
+
+/* .box-a {
+    outline: solid 1px red;
+} */
+
+h1 {
+    font-size: 38px;
+    line-height: 1.35;
+}
+
+p {
+    font-size: 0.9em;
+    font-family: 'Libre Franklin', sans-serif;
+    padding-top: 20px;
+}
+
+@media (max-width: 580px) {
+    #flexbox1 {
+        flex-direction: column-reverse;
+    }
+
+    #flexbox3 {
+        grid-template-columns: 1fr;
+        grid-row-gap: 50px;
+        max-width: 360px;
+        margin: auto;
+    }
 }
 
