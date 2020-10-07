@@ -13,32 +13,67 @@ html {
     }
 }
 
-#layout-container {
+.container {
     max-width: 1024px;
+    padding: 0 16px;
     margin: 0 auto;
-    /* height: fit-content; */
-    
 }
 
-#flexbox1 {
+#hero {
+    background-color: #f3ddff;
+}
+
+.hero-content {
     display: flex;
     flex-direction: row;
     /* outline: solid 1px red; */
 }
 
-#flexbox2 {
+#mission {
     padding: 60px 45px;
     background-color: lightblue;
     text-align: center;
     justify-content: space-around;
 }
 
-#flexbox3 {
+#featured {
     padding: 60px 0px;
-    display: grid;
-    grid-template-columns: repeat(3,328px);
-    grid-gap: 90px 20px;
-    justify-content: center;
+}
+
+.featured-content {
+    outline: solid 1px red;
+}
+
+.featured-content-items {
+
+}
+
+.featured-content-items .item {
+    margin-bottom: 1.75em;
+}
+
+.featured-content-items .item .item-image img {
+    transition: all 0.2s ease-in-out;
+}
+
+.featured-content-items .item .item-image {
+    overflow: hidden;
+}
+
+.featured-content-items .item .item-image img:hover {
+    transform: scale(1.05);
+}
+
+.featured-content-items .item:first-child {
+    background-color: pink;
+}
+
+.featured-content-items .item:last-child {
+    background-color: yellow;;
+}
+
+.featured-content-items .item:hover {
+    background-color: blue;
 }
 
 .text {
@@ -65,16 +100,29 @@ p {
     padding-top: 20px;
 }
 
-@media (max-width: 580px) {
-    #flexbox1 {
+@media (min-width: 480px) {
+    #hero {
         flex-direction: column-reverse;
     }
 
-    #flexbox3 {
-        grid-template-columns: 1fr;
-        grid-row-gap: 50px;
-        max-width: 360px;
-        margin: auto;
+    .featured-content-items {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
+
+    .featured-content-items .item {
+        flex: 0 0 32%;
+        margin-right: 2%;
+        margin-bottom: 2%;
+    }
+
+    .featured-content-items .item:nth-child(3n) {
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 800px) {
+
 }
 
